@@ -1,0 +1,38 @@
+.bg-image {
+  background-image: url(./images/lights.jpg);
+}
+
+.bg-media {
+  background-image: url(./images/media.jpg);
+  background-blend-mode: darken;
+  background-color: rgb(128, 126, 126);
+}
+
+.bg-about {
+  background-image: url(./images/image1.jpg);
+  z-index: -1;
+}
+
+.bg-effect {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-resize {
+  object-fit: cover;
+  object-position: top;
+  height: 70vh;
+}
+.carousel-caption {
+  bottom: 40%;
+}
+
+.negative {
+  margin-top: -100px;
+}
+
+.accordion-button::after {
+  content: none;
+}
