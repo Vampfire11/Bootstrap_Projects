@@ -1,0 +1,120 @@
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+
+input[type=checkbox] + label {
+  background: #212529;
+}
+input[type=checkbox]:checked + label {
+  background: #FF1300;
+  p{
+    color: #212529;
+  }
+}
+
+label{
+  cursor: pointer;
+}
+
+input:placeholder-shown {
+  font-style: italic;
+}
+
+body{
+  padding-bottom: 58px;
+}
+
+.text-new-danger {
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+.transform {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(40px);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.text-new-danger {
+  background: linear-gradient(to right, #FF1300, #FCD232);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  background-color: #FF1300;
+  height: 5px;
+  width: 0px;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.transform{
+  left: 50%;
+}
+
+.img-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .font-xs {
+    font-size: 10px;
+  }
+
+  .w-15 {
+    width: 10%;
+  }
+
+  .navbar-nav > li {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .card{
+    transition: all 1s;
+    box-shadow: 1px 2px 5px 5px rgba(34, 17, 17, 0.671);
+  }
+
+  .height{
+    height: 65vh;
+    background-image: url(../../images/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .card:hover{
+    transform: scale(1.07)
+  }
+
+  $custom-theme-colors:(
+    "new-warning": #FCD232,
+    "new-danger": #FF1300
+  );
+
+  $theme-colors:map-merge($theme-colors, $custom-theme-colors);
+
+  @import "../bootstrap/bootstrap.scss";
